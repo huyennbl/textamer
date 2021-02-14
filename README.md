@@ -4,13 +4,19 @@
 
 ## This repo is currently in development! Please test carefully if you want to use for production
 
-### Usage:
+### Installation:
+
+```js
+npm install textamer
+// or yarn
+yarn add textamer
+```
+
+## search
 
 ```js
 const { search } = require('textamer');
 ```
-
-## search
 
 `search.adjacentDuplications(text, options)`
 
@@ -48,4 +54,21 @@ Returns a new string with all the words that match 2nd argument - first letter c
 ```js
 process.capitalizeWords('frank talks about it frankly', 'frank');
 // 'Frank talks about it frankly' ('frank' in 'frankly' is a partial match, hence ignored)
+```
+
+## match
+
+```js
+const { match } = require('textamer');
+```
+
+`.ipv4(str)`
+
+```
+Returns true if str is a valid IPv4, leading & trailing whitespaces are ignored
+```
+
+```js
+match.ipv4(' 192.168.2.1 ');
+// true
 ```

@@ -3,6 +3,7 @@ const ipv4 = require('./ipv4');
 describe('ipv4()', () => {
   test('with starting/trailing spaces', () => {
     expect(ipv4('192.168.2.1 ')).toBe(true);
+    expect(ipv4('192.168.2.1 \t')).toBe(true);
     expect(ipv4(' 192.168.2.1 ')).toBe(true);
     expect(ipv4(' 192.168.2.1')).toBe(true);
   });
