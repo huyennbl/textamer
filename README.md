@@ -47,7 +47,7 @@ search.adjacentDuplications('the the cat Cat Catherine', {
 const { process } = require('textamer');
 ```
 
-`.capitalizeWords(text, word)`
+`process.capitalizeWords(text, word)`
 
 ```
 Returns a new string with all the words that match 2nd argument - first letter capitalized. Partially matches are ignore.
@@ -58,13 +58,31 @@ process.capitalizeWords('frank talks about it frankly', 'frank');
 // 'Frank talks about it frankly' ('frank' in 'frankly' is a partial match, hence ignored)
 ```
 
+`process.capitalizeAllFirstLetters(text, options)`
+
+```
+Returns text with all first letter capitalized
+```
+
+```
+options properties:
+- keepUppercase:boolean -  If true, the current uppercase letters will not change. Default: false
+```
+
+```js
+process.capitalizeAllFirstLetters('foo bAr');
+// Foo Bar
+process.capitalizeAllFirstLetters('foo bAr', { keepUppercase: true });
+// Foo BAr
+```
+
 ## match
 
 ```js
 const { match } = require('textamer');
 ```
 
-`.ipv4(str)`
+`match.ipv4(str)`
 
 ```
 Returns true if str is a valid IPv4, leading & trailing whitespaces are ignored
@@ -73,4 +91,6 @@ Returns true if str is a valid IPv4, leading & trailing whitespaces are ignored
 ```js
 match.ipv4(' 192.168.2.1 ');
 // true
+match.ipv4(' 192.168.300.1 ');
+// false
 ```
