@@ -2,6 +2,8 @@
 
 # A collection of utils to work with text
 
+> Feel free to for a feature request, I'll try my best to help :)
+
 ## This repo is currently in development! Please test carefully if you want to use for production
 
 ### Installation:
