@@ -1,8 +1,6 @@
-const process = require('./process');
+const capitalizeWords = require('./capitalizeWords');
 
 describe('capitalizeWords', () => {
-  const { capitalizeWords } = process;
-
   test('at start', () => {
     expect(capitalizeWords('CAP lorem ipsum', 'cap')).toBe('Cap lorem ipsum');
     expect(capitalizeWords('cap lorem ipsum', 'cap')).toBe('Cap lorem ipsum');
